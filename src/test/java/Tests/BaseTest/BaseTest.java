@@ -5,34 +5,34 @@ import com.topicus.DriverFactory.WebDriverFactory;
 import com.topicus.Listener.EventListener;
 import net.datafaker.Faker;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.*;
 
 @Listeners(EventListener.class)
 public class BaseTest {
 
     public WebDriver driver;
-    public String url;
+    public String testUrl;
     public Faker faker;
 
     @BeforeSuite
     public void BeforeTestSuite() throws Exception {
-        url = "https://demoqa.com/automation-practice-form";
+        testUrl = "https://demoqa.com/automation-practice-form";
         driver = WebDriverFactory.initDriver(BrowserType.EDGE);
 
         faker = new Faker();
     }
 
-    @BeforeTest
-    public void BeforeTestMethod(){
-        driver.get(url);
+    @BeforeMethod
+    public void BeforeTestMethod() {
+        driver.get(testUrl);
+    }
+
+    @AfterMethod
+    public void AfterTestMethod(){
     }
 
     @AfterSuite
     public void AfterTestSuite(){
-        driver.close();
         driver.quit();
     }
 }
