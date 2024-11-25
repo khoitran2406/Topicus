@@ -17,7 +17,7 @@ public class BaseTest {
     @BeforeSuite
     public void BeforeTestSuite() throws Exception {
         testUrl = "https://demoqa.com/automation-practice-form";
-        driver = WebDriverFactory.initDriver(BrowserType.EDGE);
+        driver = WebDriverFactory.initDriver(BrowserType.CHROME);
 
         faker = new Faker();
     }

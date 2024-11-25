@@ -20,7 +20,7 @@ public class PracticeFormTests extends BaseTest {
         practiceForm = new PracticeForm();
         practiceForm.FirstName = faker.name().firstName();
         practiceForm.LastName = faker.name().lastName();
-        practiceForm.Email = String.format("%s%s@gmail.com", faker.name().firstName(), faker.number().digits(5));
+        practiceForm.Email = faker.internet().emailAddress();
         practiceForm.Gender = Gender.MALE;
         practiceForm.Mobile = faker.number().digits(10);
         practiceForm.DateOfBirth =  new GregorianCalendar(1995, Calendar.JUNE, 24).getTime();
@@ -28,7 +28,7 @@ public class PracticeFormTests extends BaseTest {
         practiceForm.Hobbies = new ArrayList<Hobbies>();
         practiceForm.Hobbies.add(Hobbies.MUSIC);
         practiceForm.Hobbies.add(Hobbies.READING);
-        practiceForm.PicturePath = Paths.get(System.getProperty("user.dir"), "src\\main\\resources\\picture.png").toString();
+        practiceForm.PicturePath = Paths.get(System.getProperty("user.dir"), "src/main/resources/picture.png").toString();
         practiceForm.CurrentAddress = faker.address().fullAddress();
         practiceForm.State = State.NCR;
         practiceForm.City = City.DELHI;
@@ -42,7 +42,7 @@ public class PracticeFormTests extends BaseTest {
         practiceForm = new PracticeForm();
         practiceForm.FirstName = faker.name().firstName();
         practiceForm.LastName = faker.name().lastName();
-        practiceForm.Email = faker.address().mailBox();
+        practiceForm.Email = faker.internet().emailAddress();
         practiceForm.Gender = Gender.MALE;
         practiceForm.Mobile = "";
         practiceForm.DateOfBirth =  new GregorianCalendar(1995, Calendar.JUNE, 24).getTime();
@@ -50,7 +50,7 @@ public class PracticeFormTests extends BaseTest {
         practiceForm.Hobbies = new ArrayList<Hobbies>();
         practiceForm.Hobbies.add(Hobbies.MUSIC);
         practiceForm.Hobbies.add(Hobbies.READING);
-        practiceForm.PicturePath = Paths.get(System.getProperty("user.dir"), "src\\main\\resources\\picture.png").toString();
+        practiceForm.PicturePath = Paths.get(System.getProperty("user.dir"), "src/main/resources/picture.png").toString();
         practiceForm.CurrentAddress = faker.address().fullAddress();
         practiceForm.State = State.NCR;
         practiceForm.City = City.DELHI;

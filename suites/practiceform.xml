@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="PracticeForm" verbose="1">
+    <test name="PracticeFormTest">
+        <classes>
+            <class name="Tests.PracticeForm.PracticeFormTests"/>
+        </classes>
+    </test>
+</suite>
+

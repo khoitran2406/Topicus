@@ -1,0 +1,11 @@
+<suite name="VerifySubmitFormTest" verbose="1">
+    <test name="VerifySubmitFormTest">
+        <classes>
+            <class name="Tests.PracticeForm.PracticeFormTests">
+                <methods>
+                    <include name="verify Submit form successfully with all field"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
